@@ -17,12 +17,12 @@ const ioHandler = (req: NextApiRequest, res: NextApiResponseServerIo) => {
     const io = new ServerIO(httpServer, {
       path: path,
       // @ts-ignore
-      addTrailingSlash: false,
+      // addTrailingSlash: false,
     });
     res.socket.server.io = io;
   }
 
   res.end();
-}
+};
 
 export default ioHandler;
